@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-builder: 'Builder Sans', 'HCo Gotham SSm', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-fredoka: 'Fredoka', 'Montserrat', sans-serif;
+    --font-source: 'Source Sans 3', 'Montserrat', sans-serif;
+    --font-luau: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  html,
+  body {
+    font-family: var(--font-builder);
+    background-color: #090C13;
+    color: #F4F7FF;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  button,
+  a {
+    cursor: pointer;
+  }
+}
+
+.font-builder {
+  font-family: var(--font-builder);
+}
+
+.font-fredoka {
+  font-family: var(--font-fredoka);
+}
+
+.font-source {
+  font-family: var(--font-source);
+}
+
+.font-luau {
+  font-family: var(--font-luau);
+}
+
+/* Authentic Roblox Simulator UIStroke Text Outline */
+.rbx-stroke {
+  paint-order: stroke fill;
+  -webkit-text-stroke: 3px #07090F;
+  text-shadow: 0 3px 0 #07090F;
+}
+
+.rbx-stroke-sm {
+  paint-order: stroke fill;
+  -webkit-text-stroke: 2px #07090F;
+  text-shadow: 0 2px 0 #07090F;
+}
+
+/* Subtle 3D Roblox Baseplate Stud Texture */
+.rbx-stud-grid {
+  background-color: #090C13;
+  background-image:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.045) 0px, rgba(255, 255, 255, 0.03) 5px, transparent 6px),
+    radial-gradient(circle at 50% 56%, rgba(0, 0, 0, 0.55) 5px, transparent 7px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.rbx-stud-surface {
+  background-image:
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.04) 4px, transparent 5.5px),
+    radial-gradient(circle at 50% 55%, rgba(0, 0, 0, 0.45) 4.5px, transparent 6.5px);
+  background-size: 24px 24px;
+}
+
+/* 9-Slice Roblox GUI Frame */
+.rbx-frame {
+  background: linear-gradient(180deg, #151A28 0%, #0F131E 100%);
+  border: 2px solid #252E46;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 6px 0 #06080D,
+    0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+.rbx-frame-subtle {
+  background: linear-gradient(180deg, #131825 0%, #0D111B 100%);
+  border: 1.5px solid #222A40;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 4px 0 #06080E;
+}
+
+/* Tactile 3D Roblox GUI Buttons (UIGradient + UIStroke + Bottom Bevel Lip) */
+.rbx-btn-green {
+  background: linear-gradient(180deg, #19F787 0%, #00C862 100%);
+  color: #041A0E;
+  font-weight: 800;
+  border: 2px solid #06090F;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.48),
+    0 4px 0 #007A3B,
+    0 8px 22px rgba(0, 230, 118, 0.28);
+  transition: transform 90ms cubic-bezier(0.2, 0.9, 0.3, 1.2), box-shadow 90ms ease, filter 120ms ease;
+}
+.rbx-btn-green:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    0 5px 0 #007A3B,
+    0 12px 26px rgba(0, 230, 118, 0.38);
+}
+.rbx-btn-green:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 1px 0 #007A3B;
+}
+
+.rbx-btn-blue {
+  background: linear-gradient(180deg, #4796FF 0%, #1B68F2 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  border: 2px solid #06090F;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.38),
+    0 4px 0 #0E3D99,
+    0 8px 22px rgba(51, 133, 255, 0.28);
+  transition: transform 90ms cubic-bezier(0.2, 0.9, 0.3, 1.2), box-shadow 90ms ease, filter 120ms ease;
+}
+.rbx-btn-blue:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    0 5px 0 #0E3D99,
+    0 12px 26px rgba(51, 133, 255, 0.36);
+}
+.rbx-btn-blue:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 0 #0E3D99;
+}
+
+.rbx-btn-gold {
+  background: linear-gradient(180deg, #FFDC4A 0%, #FFA800 100%);
+  color: #1A1100;
+  font-weight: 800;
+  border: 2px solid #06090F;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    0 4px 0 #9E5E00,
+    0 8px 22px rgba(255, 184, 0, 0.28);
+  transition: transform 90ms cubic-bezier(0.2, 0.9, 0.3, 1.2), box-shadow 90ms ease, filter 120ms ease;
+}
+.rbx-btn-gold:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+.rbx-btn-gold:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 1px 0 #9E5E00;
+}
+
+.rbx-btn-dark {
+  background: linear-gradient(180deg, #1E2538 0%, #141927 100%);
+  color: #E6ECF8;
+  font-weight: 700;
+  border: 2px solid #2B3550;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 4px 0 #070A10;
+  transition: transform 90ms cubic-bezier(0.2, 0.9, 0.3, 1.2), box-shadow 90ms ease, border-color 120ms ease;
+}
+.rbx-btn-dark:hover {
+  border-color: #3E4D73;
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 5px 0 #070A10;
+}
+.rbx-btn-dark:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 1px 0 #070A10;
+}
+
+/* Infinite Lemonade.gg-style Showcase Marquee */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 42s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom sleek Studio scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0D14;
+}
+::-webkit-scrollbar-thumb {
+  background: #232C42;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334060;
+}
